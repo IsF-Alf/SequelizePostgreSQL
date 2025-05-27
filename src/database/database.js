@@ -1,15 +1,15 @@
-import Sequelize from 'sequelize' 
+import { Sequelize } from 'sequelize';
 
-export const sequelize = new Sequelize('railway', 'postgres', 'HPZzCQwyFczVCRJIOnymQKywYoSePSLV', {
-  host: 'gondola.proxy.rlwy.net',
-  dialect: 'postgres'
-  });
-
-  import { Sequelize } from 'sequelize';
-
-/* export const sequelize = new Sequelize('postgres', 'postgres', 'TU_CONTRASEÑA', {
-host: 'db.zbmhvcovyyjeasostxxm.supabase.co',
-  dialect: 'postgres',
+export const sequelize = new Sequelize('postgres', 'postgres', 'Contras1234+', {
+  host: 'zbmhvcovyyjeasostxxm.supabase.co', 
+  
   port: 5432,
-  logging: false,
-}); */
+  dialect: 'postgres',
+  dialectOptions: {
+    ssl: {
+      require: true,
+      rejectUnauthorized: false 
+    }
+  },
+  logging: false
+});
